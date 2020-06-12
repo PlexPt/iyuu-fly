@@ -1,0 +1,29 @@
+management:
+  endpoints:
+    shutdown:
+      enabled: true
+    web:
+      exposure:
+        include: shutdown
+  endpoint:
+    shutdown:
+      enabled: true
+
+server:
+  port: 23233
+
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 10240MB
+      max-request-size: 10240MB
+
+
+iyuu:
+  version: 1.0
+logging:
+  file:
+    path: logs
