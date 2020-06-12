@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.0.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.github.plexpt</groupId>
+    <artifactId>iyuu</artifactId>
+    <version>1.0.0</version>
+    <name>iyuu-fly</name>
+    <description>iyuu fly Spring Boot</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+
+        <springboot.version>2.3.0.RELEASE</springboot.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+
+        <mybatisplus.version>3.3.1</mybatisplus.version>
+        <mysql.version>5.1.47</mysql.version>
+        <druid.version>1.1.20</druid.version>
+        <quartz.version>2.3.1</quartz.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <commons.lang3.version>3.9</commons.lang3.version>
+        <commons.fileupload.version>1.4</commons.fileupload.version>
+        <commons.io.version>2.6</commons.io.version>
+        <commons.math.version>3.6.1</commons.math.version>
+        <commons.compress.version>1.19</commons.compress.version>
+        <commons.codec.version>1.13</commons.codec.version>
+        <commons.text.version>1.8</commons.text.version>
+        <commons.collections4.version>4.4</commons.collections4.version>
+        <commons.configuration.version>1.10</commons.configuration.version>
+
+
+        <shiro.version>1.4.1</shiro.version>
+        <redisson.version>3.11.5</redisson.version>
+        <jwt.version>0.9.0</jwt.version>
+        <kaptcha.version>0.0.9</kaptcha.version>
+        <thumbnailator.version>0.4.8</thumbnailator.version>
+        <swagger.version>2.7.0</swagger.version>
+        <!--        <swagger.version>2.9.2</swagger.version>-->
+        <joda.time.version>2.10.5</joda.time.version>
+        <fastjson.version>1.2.62</fastjson.version>
+        <hutool.version>5.0.5</hutool.version>
+        <lombok.version>1.18.10</lombok.version>
+        <validation.version>2.0.1.Final</validation.version>
+        <dynamic-datasource.version>2.5.7</dynamic-datasource.version>
+
+        <easyexcel.version>2.1.3</easyexcel.version>
+        <wxjava.version>3.6.0</wxjava.version>
+        <aliyun.core.version>4.4.2</aliyun.core.version>
+        <aliyun.oss.version>3.8.0</aliyun.oss.version>
+        <aliyun.aliyun-log-producer.version>0.3.3</aliyun.aliyun-log-producer.version>
+        <aliyun.dysmsapi.version>1.1.0</aliyun.dysmsapi.version>
+        <alipay.version>3.7.110.ALL</alipay.version>
+
+        <rongcloud.version>3.0.6</rongcloud.version>
+        <okhttp3.version>1.0.0.RELEASE</okhttp3.version>
+        <okhttp.version>3.14.4</okhttp.version>
+        <xinge.version>1.1.8</xinge.version>
+        <checkstyle.version>8.22</checkstyle.version>
+        <slf4j.version>1.7.29</slf4j.version>
+        <jedis.version>2.9.3</jedis.version>
+        <jedis.version>3.1.0</jedis.version>
+        <mica.http.version>2.0.1.20200510</mica.http.version>
+        <jetcache.version>2.5.14</jetcache.version>
+        <guava.version>28.1-jre</guava.version>
+        <jacoco.agent.version>0.8.4</jacoco.agent.version>
+        <xxl-job.version>2.0.2</xxl-job.version>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
+        <!--        </dependency>-->
+        <!--sqlite的必须依赖-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.xerial</groupId>-->
+        <!--            <artifactId>sqlite-jdbc</artifactId>-->
+        <!--            <version>3.30.1</version>-->
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>logging-interceptor</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-http</artifactId>
+            <version>${mica.http.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.sarryromain</groupId>-->
+<!--            <artifactId>qbittorrent-api</artifactId>-->
+<!--            <version>1.0</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- 打包时跳过单元测试 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
